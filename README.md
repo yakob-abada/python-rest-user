@@ -5,7 +5,7 @@ This project provides a REST API for managing user authentication and registrati
 
 ## Installation
 
-1. Clone the repository:
+1. Run docker:
    ```bash
    docker-compose up --build
    ```
