@@ -1,11 +1,12 @@
 from fastapi import FastAPI, Depends
-from database import get_db
+from database import get_db, create_tables
 from handlers import UserHandler
 from schemas import UserCreate, UserResponse
 from sqlalchemy.orm import Session
 from typing import List
 
 app = FastAPI()
+create_tables()
 
 def get_handler(db: Session = Depends(get_db)):
     return UserHandler(db)
